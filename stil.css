@@ -60,7 +60,9 @@ margin: 10px;
 }
 
 #mycanvas {
-    background-color: pink;
+    background-color: yellow;
+    width: 900px;
+    height: 500px;
 }
 
 #alt {

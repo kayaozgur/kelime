@@ -28,9 +28,9 @@ $(document).ready(function(){
         for (var i = 0; i < kelime.length; i++) {
            
                  var buton = document.createElement("button");
-            
+             
                     buton.innerHTML = kelime[i];
-                                        
+                    if (buton.getAttribute == "") { buton.style.background = "red";}                   
                     document.getElementById('ortasol').appendChild(buton);
                     buton.onclick = function () {
         

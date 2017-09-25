@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+
+button {
+    width: 50px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 30px;
+}
+
+#ust {
+    background-color: yellowgreen;
+    border: 2px solid red;
+    text-align: center;
+
+}
+
+#orta {
+    margin: 100px;
+}
+
+#ortasol {
+
+    border: 2px solid black;
+    text-align: center;
+}

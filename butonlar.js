@@ -20,11 +20,11 @@ $(document).ready(function () {
                         var harf, index;
                         harf = $(this).text();
                         index = klm.indexOf(harf);
-                        
-                        if(index != -1) {
-                                $('#'+index).text(harf);
+
+                        if (index != -1) {
+                                $('#' + index).text(harf);
                         }
-                        
+
 
 
                 };
@@ -46,7 +46,7 @@ $(document).ready(function () {
 
         }
 
-        
+
 
 });
 

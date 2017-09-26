@@ -18,8 +18,8 @@ body {
 }
 
 button {
-    width: 45px;
-    height: 45px;
+    width: 42px;
+    height: 42px;
     background: white;
     padding: 5px;
     margin: 6px auto;
@@ -27,7 +27,7 @@ button {
 }
 
 #ust {
-    background-color: yellowgreen;
+    background-color: black;
     text-align: center;
    
    
@@ -47,6 +47,7 @@ button {
 
     border: 2px solid black;
     text-align: center;
+    margin: 10px;
     
     
 }
@@ -54,16 +55,17 @@ button {
 #ortasag {
   
 width: 100%;
-height: 500px;
+height: 520px;
 -webkit-box-flex: 0;  
-background-color: #8275F5;
-margin-top: 10px;
+background-color: #fff;
+margin: 10px;
 
 }
 
 #mycanvas {
-    background-color: yellow;
-    width: 100%;
-    height: 500px;
+    background-color: #fff;
+    border: 2px solid #000;
+    margin: 5px;
+   
 }
 

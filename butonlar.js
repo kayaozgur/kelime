@@ -6,6 +6,7 @@ $(document).ready(function () {
         var kelime = klm.split("");
 
         var alfabe = abc.split(" ");
+        var hata = 0;
 
         for (var i = 0; i < alfabe.length; i++) {
 
@@ -17,25 +18,64 @@ $(document).ready(function () {
                 butonAbc.onclick = function () {
 
                         $(this).css("background", "red");
-                        
-                        var hata = 0;
+
+
+
                         var harf = $(this).text();
+                        var index = klm.indexOf(harf);
 
-                        for (var i = 0 ; i < klm.length; i++) {
+                        if (index == -1) {
 
-                                if(harf == klm[i]) {
-                                        $('#'+i).text(harf);
-                                }else {
+                                hata++;
+                                switch (hata) {
+                                        case 1:
+                                                kafa();
+                                                break;
+                                        case 2:
+                                                govde();
+                                                break;
+                                        case 3:
+                                                sagayak();
+                                                break;
+                                        case 4:
+                                                solayak();
+                                                break;
+                                        case 5:
+                                                sagel();
+                                                break;
+                                        case 6:
+                                                solel();
+                                                break;
+                                        case 7:
+                                                zemin();
+                                                break;
+                                        case 8:
+                                                direkgovde();
+                                                break;
+                                        case 9:
+                                                direkuc();
+                                                break;
+                                        case 10:
+                                                ip();
+                                                break;
+                                        default:
+                                                break;
+                                }
 
-                                        hata++;
+                        } else {
+
+                                for (var i = 0; i < klm.length; i++) {
+
+                                        if (harf == klm[i]) {
+                                                $('#' + i).text(harf);
+                                        }
 
 
                                 }
-
-
                         }
 
-                        console.log(hata); 
+
+
 
 
                 };
@@ -65,104 +105,106 @@ $(document).ready(function () {
 
                 ctx.beginPath();
                 ctx.strokeStyle = "black";
+                ctx.lineWidth = 3;
                 ctx.arc(300, 80, 30, 0 * Math.PI, 2 * Math.PI);
                 ctx.stroke();
         }
 
         function govde() {
 
-            ctx.beginPath();
-            ctx.strokeStyle = "black";
-            ctx.lineWidth = 3;
-            ctx.moveTo(300,110);
-            ctx.lineTo(300,250);
-            ctx.stroke();
-    }
+                ctx.beginPath();
+                ctx.strokeStyle = "black";
+                ctx.lineWidth = 3;
+                ctx.moveTo(300, 110);
+                ctx.lineTo(300, 250);
+                ctx.stroke();
+        }
 
-    function sagayak() {
+        function sagayak() {
 
-            ctx.beginPath();
-            ctx.strokeStyle = "black";
-            ctx.moveTo(300,250);
-            ctx.lineTo(250,300);
-            ctx.stroke();
-    }
+                ctx.beginPath();
+                ctx.strokeStyle = "black";
+                ctx.moveTo(300, 250);
+                ctx.lineTo(250, 300);
+                ctx.stroke();
+        }
 
-    function solayak() {
+        function solayak() {
 
-            ctx.beginPath();
-            ctx.strokeStyle = "black";
-            ctx.moveTo(300,250);
-            ctx.lineTo(350,300);
-            ctx.stroke();
-    }
+                ctx.beginPath();
+                ctx.strokeStyle = "black";
+                ctx.moveTo(300, 250);
+                ctx.lineTo(350, 300);
+                ctx.stroke();
+        }
 
-    function sagel() {
+        function sagel() {
 
-            ctx.beginPath();
-            ctx.strokeStyle = "black";
-            ctx.moveTo(300,150);
-            ctx.lineTo(250,200);
-            ctx.stroke();
-    }
+                ctx.beginPath();
+                ctx.strokeStyle = "black";
+                ctx.moveTo(300, 150);
+                ctx.lineTo(250, 200);
+                ctx.stroke();
+        }
 
-    function solel() {
+        function solel() {
 
-            ctx.beginPath();
-            ctx.strokeStyle = "black";
-            ctx.moveTo(300,150);
-            ctx.lineTo(350,200);
-            ctx.stroke();
-    }
+                ctx.beginPath();
+                ctx.strokeStyle = "black";
+                ctx.moveTo(300, 150);
+                ctx.lineTo(350, 200);
+                ctx.stroke();
+        }
 
-    function zemin() {
+        function zemin() {
 
-            ctx.beginPath();
-            ctx.strokeStyle = "black";
-            ctx.moveTo(150,300);
-            ctx.lineTo(200,300);
-            ctx.stroke();
-    }
+                ctx.beginPath();
+                ctx.strokeStyle = "black";
+                ctx.moveTo(150, 300);
+                ctx.lineTo(200, 300);
+                ctx.stroke();
+        }
 
-       function direkgovde() {
+        function direkgovde() {
 
-            ctx.beginPath();
-            ctx.strokeStyle = "black";
-            ctx.moveTo(175,20);
-            ctx.lineTo(175,300);
-            ctx.stroke();
-    }
+                ctx.beginPath();
+                ctx.strokeStyle = "black";
+                ctx.moveTo(175, 20);
+                ctx.lineTo(175, 300);
+                ctx.stroke();
+        }
 
         function direkuc() {
 
-            ctx.beginPath();
-            ctx.strokeStyle = "black";
-            ctx.moveTo(173,20);
-            ctx.lineTo(320,20);
-            ctx.stroke();
-    }
+                ctx.beginPath();
+                ctx.strokeStyle = "black";
+                ctx.moveTo(173, 20);
+                ctx.lineTo(320, 20);
+                ctx.stroke();
+        }
 
         function ip() {
 
-            ctx.beginPath();
-            ctx.strokeStyle = "black";
-            ctx.moveTo(300,20);
-            ctx.lineTo(300,50);
-            ctx.stroke();
-    }
+                ctx.beginPath();
+                ctx.strokeStyle = "black";
+                ctx.moveTo(300, 20);
+                ctx.lineTo(300, 50);
+                ctx.stroke();
+        }
 
 
 
-    kafa();
-    govde();
-    sagayak();
-    solayak();
-    sagel();
-    solel();
-    zemin();
-    direkgovde();
-    direkuc();
-    ip();
+
+
+
+
+
+
+
+
+
+
+
 
 });
 
